@@ -1,9 +1,9 @@
 import HlsVideo from "@/components/HlsVideo";
 
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/" },
-  { label: "LinkedIn", href: "https://linkedin.com/" },
-  { label: "Email", href: "mailto:hello@example.com" },
+  { label: "GitHub", href: "https://github.com/ShivakumarSindolli" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/shivakumar-sindolli-7b4b69394/" },
+  { label: "Email", href: "mailto:shivakumarshindolli@gmail.com" },
 ];
 
 const MARQUEE_WORD = "LET'S BUILD SOMETHING · ";
@@ -20,7 +20,7 @@ export default function Contact() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 sm:gap-4">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:shivakumarshindolli@gmail.com"
             className="group relative rounded-full px-6 py-3 text-sm transition-transform duration-300 hover:scale-105 sm:px-7 sm:py-3.5"
           >
             <span className="absolute inset-0 rounded-full bg-text-primary" />
