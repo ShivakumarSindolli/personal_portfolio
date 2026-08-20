@@ -7,7 +7,7 @@ const STATS: Stat[] = [
   { value: 4, suffix: "", label: "Full-stack & ML projects shipped" },
   { value: 84, suffix: "%", label: "Honest AQI model accuracy" },
   { value: 20, suffix: "+", label: "Technologies used across projects" },
-  { value: 4, suffix: "th", label: "Semester, CS Engineering" },
+  { value: 5, suffix: "th", label: "Semester, CS Engineering" },
 ];
 
 function CountUp({ value, suffix }: { value: number; suffix: string }) {
