@@ -49,13 +49,7 @@ export type Hackathon = {
 };
 
 // Placeholders only — names, teams, dates, and achievements are not invented.
-export const hackathons: Hackathon[] = [
-    { id: "h1", status: "Top 10 Finalist", name: "[Hackathon Name]", year: "[Year]" },
-    { id: "h2", status: "Top 10 Finalist", name: "[Hackathon Name]", year: "[Year]" },
-    { id: "h3", status: "Participant", name: "[Hackathon Name]", year: "[Year]" },
-    { id: "h4", status: "Participant", name: "[Hackathon Name]", year: "[Year]" },
-    { id: "h5", status: "Participant", name: "[Hackathon Name]", year: "[Year]" },
-];
+export const hackathons: Hackathon[] = [];
 
 export const achievementStats = [
     { value: "9.2", label: "CGPA" },

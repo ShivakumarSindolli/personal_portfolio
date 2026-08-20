@@ -79,26 +79,6 @@ function TimelineCard({ item, side }: { item: TimelineItem; side: "left" | "righ
                         </div>
                     )}
 
-                    {item.category === "hackathons" && (
-                        <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                            {hackathons.map((h) => (
-                                <div
-                                    key={h.id}
-                                    className="relative rounded-xl border border-stroke p-3 text-left"
-                                >
-                                    {h.status === "Top 10 Finalist" && (
-                                        <span className="absolute -top-2 right-3 animate-pulse rounded-full bg-text-primary px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-bg">
-                                            Top 10
-                                        </span>
-                                    )}
-                                    <p className="text-[10px] uppercase tracking-widest text-muted">{h.status}</p>
-                                    <p className="mt-1 font-display italic text-text-primary">{h.name}</p>
-                                    <p className="text-xs text-muted">{h.year}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-
                     {item.category === "certifications" && (
                         <button className="mt-5 rounded-full border border-stroke px-5 py-2 text-xs text-muted transition-colors hover:border-white/30 hover:text-text-primary">
                             View Certificate
