@@ -1,4 +1,4 @@
-# Shivakumar A Sindolli — Portfolio v2
+# Shivakumar A Sindolli — Portfolio 
 
 Monochrome, cinematic, MotionSites "cosmic hero" style portfolio.
 Vite + React 18 + TypeScript + Tailwind CSS + GSAP + Framer Motion + HLS.js.
