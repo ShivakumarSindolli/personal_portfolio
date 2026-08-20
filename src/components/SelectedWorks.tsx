@@ -3,13 +3,20 @@ import SectionHeader from "@/components/SectionHeader";
 import AQIFeatured from "@/components/projects/AQIFeatured";
 import BookExchangeCard from "@/components/projects/BookExchangeCard";
 import RideBookingCard from "@/components/projects/RideBookingCard";
+import AIDoctorProFeatured from "@/components/projects/AIDoctorProFeatured";
 import CaseStudyModal from "@/components/projects/CaseStudyModal";
-import { aqiProject, bookExchangeProject, rideBookingProject } from "@/data/projects";
+import {
+  aqiProject,
+  bookExchangeProject,
+  rideBookingProject,
+  aiDoctorProProject,
+} from "@/data/projects";
 
 type Slug =
   | typeof aqiProject.slug
   | typeof bookExchangeProject.slug
-  | typeof rideBookingProject.slug;
+  | typeof rideBookingProject.slug
+  | typeof aiDoctorProProject.slug;
 
 export default function SelectedWorks() {
   const [openSlug, setOpenSlug] = useState<Slug | null>(null);
@@ -26,6 +33,7 @@ export default function SelectedWorks() {
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-12">
           <AQIFeatured onOpenCaseStudy={() => setOpenSlug(aqiProject.slug)} />
+          <AIDoctorProFeatured onOpenCaseStudy={() => setOpenSlug(aiDoctorProProject.slug)} />
           <BookExchangeCard onOpenCaseStudy={() => setOpenSlug(bookExchangeProject.slug)} />
           <RideBookingCard onOpenCaseStudy={() => setOpenSlug(rideBookingProject.slug)} />
         </div>

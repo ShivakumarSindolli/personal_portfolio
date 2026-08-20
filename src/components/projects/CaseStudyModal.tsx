@@ -1,12 +1,18 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { aqiProject, bookExchangeProject, rideBookingProject } from "@/data/projects";
+import {
+  aqiProject,
+  bookExchangeProject,
+  rideBookingProject,
+  aiDoctorProProject,
+} from "@/data/projects";
 
 type ProjectSlug =
   | typeof aqiProject.slug
   | typeof bookExchangeProject.slug
-  | typeof rideBookingProject.slug;
+  | typeof rideBookingProject.slug
+  | typeof aiDoctorProProject.slug;
 
 export default function CaseStudyModal({
   slug,
@@ -119,6 +125,22 @@ export default function CaseStudyModal({
                     ))}
                   </div>
                 </div>
+              </div>
+            )}
+            {slug === aiDoctorProProject.slug && (
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-muted">Full Stack · AI/ML</p>
+                <h2 className="mt-2 font-display text-4xl italic text-text-primary">
+                  {aiDoctorProProject.title}
+                </h2>
+                {aiDoctorProProject.caseStudy.map((section) => (
+                  <div key={section.heading} className="mt-8 border-t border-stroke pt-8">
+                    <h3 className="mb-3 text-sm uppercase tracking-widest text-text-primary">
+                      {section.heading}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted">{section.body}</p>
+                  </div>
+                ))}
               </div>
             )}
           </motion.div>

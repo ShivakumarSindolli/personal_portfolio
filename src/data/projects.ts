@@ -181,3 +181,85 @@ export const rideBookingProject: RideBookingProject = {
     ],
     links: {},
 };
+
+export type AIDoctorProProject = {
+    kind: "ai-doctor-pro";
+    slug: string;
+    title: string;
+    description: string;
+    confidence: string;
+    tech: string[];
+    pipeline: PipelineStage[];
+    specialties: string[];
+    caseStudy: CaseStudySection[];
+    links: { github?: string; caseStudy?: boolean };
+};
+
+export const aiDoctorProProject: AIDoctorProProject = {
+    kind: "ai-doctor-pro",
+    slug: "ai-doctor-pro",
+    title: "AI Doctor Pro",
+    description:
+        "A multi-modal AI medical assistant — voice and image symptoms in, a confidence-scored differential diagnosis and specialist triage out.",
+    confidence: "0.4",
+    tech: [
+        "FastAPI",
+        "React (Vite)",
+        "PostgreSQL",
+        "ChromaDB",
+        "Groq (Whisper, Llama 3.3 70B, Llama 4 Scout)",
+        "sentence-transformers",
+    ],
+    pipeline: [
+        {
+            label: "Voice / Image",
+            detail:
+                "Groq Whisper large-v3 transcribes patient-described symptoms (Google Speech Recognition as fallback); an optional image is classified by Llama 4 Scout into wound, skin disease, scan, or eye condition.",
+        },
+        {
+            label: "Triage",
+            detail:
+                "Explicit rule-based routing across 12+ specialties — e.g. wounds route to general medicine, not dermatology, while genuine skin disease does. Also classifies urgency: emergency, urgent, or routine.",
+        },
+        {
+            label: "RAG Retrieval",
+            detail:
+                "sentence-transformers + ChromaDB retrieve the top-5 relevant chunks from per-specialty medical text (cardiology, dermatology, general medicine, neuro/ortho).",
+        },
+        {
+            label: "Diagnosis",
+            detail:
+                "Llama 3.3 70B generates a differential of 3–5 diagnoses with likelihoods, ICD-10 hints, and a reasoning explanation, grounded in the retrieved context.",
+        },
+        {
+            label: "Safety Score",
+            detail:
+                "A 5-factor weighted confidence score (symptom clarity, diagnosis quality, vision confidence, hedging penalty, referral-flag penalty) gates whether the case escalates to a human doctor.",
+        },
+    ],
+    specialties: [
+        "General Medicine",
+        "Dermatology",
+        "Cardiology",
+        "Neurology",
+        "Orthopedics",
+        "Gastroenterology",
+        "Pulmonology",
+        "Psychiatry",
+        "Ophthalmology",
+        "ENT",
+        "Endocrinology",
+        "Urology",
+    ],
+    caseStudy: [
+        {
+            heading: "Problem",
+            body: "Build an educational AI medical assistant that takes voice and image input from a patient, triages it to the right specialty among 12+, and generates a confidence-scored differential diagnosis — while knowing when to escalate to a human doctor instead of guessing.",
+        },
+        {
+            heading: "Objective",
+            body: "Chain a production-shaped AI pipeline — speech-to-text, vision, retrieval-augmented generation, and LLM reasoning — into a single consultation flow, on top of a real multi-tenant patient/doctor portal, not just a static demo.",
+        },
+    ],
+    links: { caseStudy: true },
+};
