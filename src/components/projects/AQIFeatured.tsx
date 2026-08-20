@@ -94,12 +94,16 @@ export default function AQIFeatured({ onOpenCaseStudy }: { onOpenCaseStudy: () =
                             View Case Study
                         </button>
 
-                        <a
-                            href="#"
-                            className="rounded-full border border-stroke px-6 py-3 text-sm text-muted transition-colors hover:border-white/30 hover:text-text-primary"
-                        >
-                            GitHub
-                        </a>
+                        {aqiProject.links.github && (
+                            <a
+                                href={aqiProject.links.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full border border-stroke px-6 py-3 text-sm text-muted transition-colors hover:border-white/30 hover:text-text-primary"
+                            >
+                                GitHub
+                            </a>
+                        )}
                     </div>
             </div>
 

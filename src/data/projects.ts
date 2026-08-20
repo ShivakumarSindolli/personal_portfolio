@@ -121,7 +121,10 @@ export const aqiProject: AQIProject = {
             body: "An honest 84% is a far more defensible result than a leaked 99% — and catching the leakage myself, rather than being caught by it later, taught me to interrogate suspiciously perfect metrics before trusting them.",
         },
     ],
-    links: { caseStudy: true },
+    links: {
+        github: "https://github.com/ShivakumarSindolli/AQI-Prediction-ML_Project",
+        caseStudy: true,
+    },
 };
 
 export const bookExchangeProject: BookExchangeProject = {
