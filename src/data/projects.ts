@@ -149,7 +149,10 @@ export const bookExchangeProject: BookExchangeProject = {
         "Backend API",
         "Database",
     ],
-    links: {},
+    links: {
+        demo: "https://online-book-exchange-platform-navy.vercel.app/",
+        github: "https://github.com/ShivakumarSindolli/Online_Book_Exchange_platform",
+    },
 };
 
 export const rideBookingProject: RideBookingProject = {

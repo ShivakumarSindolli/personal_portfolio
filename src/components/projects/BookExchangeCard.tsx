@@ -75,15 +75,30 @@ export default function BookExchangeCard({ onOpenCaseStudy }: { onOpenCaseStudy:
                     onClick={onOpenCaseStudy}
                     className="rounded-full bg-text-primary px-6 py-3 text-sm text-bg transition-transform duration-300 hover:scale-105"
                 >
-                    Live Demo
+                    View Details
                 </button>
 
-                <a
-                    href="#"
-                    className="rounded-full border border-stroke px-6 py-3 text-sm text-muted transition-colors hover:border-white/30 hover:text-text-primary"
-                >
-                    GitHub
-                </a>
+                {bookExchangeProject.links.demo && (
+                    <a
+                        href={bookExchangeProject.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-stroke px-6 py-3 text-sm text-text-primary transition-transform duration-300 hover:scale-105 hover:border-white/30"
+                    >
+                        Live Demo
+                    </a>
+                )}
+
+                {bookExchangeProject.links.github && (
+                    <a
+                        href={bookExchangeProject.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-stroke px-6 py-3 text-sm text-muted transition-colors hover:border-white/30 hover:text-text-primary"
+                    >
+                        GitHub
+                    </a>
+                )}
             </div>
     </motion.div >
   );
