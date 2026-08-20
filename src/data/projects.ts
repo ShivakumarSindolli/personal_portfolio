@@ -198,7 +198,7 @@ export type AIDoctorProProject = {
     pipeline: PipelineStage[];
     specialties: string[];
     caseStudy: CaseStudySection[];
-    links: { github?: string; caseStudy?: boolean };
+    links: { demo?: string; github?: string; caseStudy?: boolean };
 };
 
 export const aiDoctorProProject: AIDoctorProProject = {
