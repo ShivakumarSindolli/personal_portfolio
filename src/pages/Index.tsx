@@ -3,11 +3,10 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SelectedWorks from "@/components/SelectedWorks";
-import Journal from "@/components/Journal";
-import Explorations from "@/components/Explorations";
 import Stats from "@/components/Stats";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
 
 export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,10 +25,9 @@ export default function Index() {
         <Navbar />
         <main className="bg-bg">
           <Hero />
+          <Skills />
           <SelectedWorks />
           <Experience />
-          <Journal />
-          <Explorations />
           <Stats />
           <Contact />
         </main>
