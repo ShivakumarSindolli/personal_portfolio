@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skillGroups } from "@/data/skills";
+import { skillGroups, exploringSkills } from "@/data/skills";
 import SectionHeader from "@/components/SectionHeader";
 
 export default function Skills() {
@@ -13,7 +13,33 @@ export default function Skills() {
                     subtext="Languages, frameworks, and the CS fundamentals underneath them."
                 />
 
-                <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {/* What I'm Exploring Banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-8 rounded-2xl border border-stroke bg-surface/80 p-6 md:p-8"
+                >
+                    <p className="text-xs uppercase tracking-[0.2em] text-muted">Current Focus</p>
+                    <h3 className="mt-1 font-display text-2xl italic text-text-primary">
+                        What I'm Exploring
+                    </h3>
+                    <div className="mt-4 flex flex-wrap items-center gap-3">
+                        {exploringSkills.map((item, i) => (
+                            <span
+                                key={item}
+                                className="flex items-center gap-2 rounded-full border border-stroke bg-bg/60 px-4 py-2 text-xs font-medium text-text-primary transition-colors hover:border-white/30"
+                            >
+                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                                {item}
+                                {i < exploringSkills.length - 1 && <span className="ml-1 text-muted">•</span>}
+                            </span>
+                        ))}
+                    </div>
+                </motion.div>
+
+                <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     {skillGroups.map((group, i) => (
                         <motion.div
                             key={group.category}

@@ -25,3 +25,12 @@ export const skillGroups: SkillGroup[] = [
         ],
     },
 ];
+
+export const exploringSkills = [
+    "Deep Learning",
+    "Transformers",
+    "LLMs",
+    "RAG",
+    "AI Agents",
+    "Cloud",
+];

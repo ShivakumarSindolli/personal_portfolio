@@ -11,11 +11,11 @@ export const timelineItems: TimelineItem[] = [
     {
         id: "education",
         category: "education",
-        title: "Computer Science Engineering",
+        title: "B.E. in Computer Science Engineering",
         org: "KLE Technological University",
         description:
-            "[Degree] · [Current semester/year] · [Relevant coursework] · [Academic achievements]",
-        meta: ["Degree — editable", "Semester/year — editable", "Coursework — editable"],
+            "Currently pursuing undergraduate studies in 5th Semester with a 9.2 CGPA.",
+        meta: ["Undergraduate", "5th Semester", "9.2 CGPA"],
     },
     {
         id: "hackathon-journey",
@@ -33,13 +33,6 @@ export const timelineItems: TimelineItem[] = [
         description:
             "Served as a Class Representative, helping coordinate communication between students and faculty, sharing important information, and supporting class coordination.",
         meta: ["Leadership", "Communication", "Team Coordination", "Responsibility", "Problem Solving"],
-    },
-    {
-        id: "certification",
-        category: "certifications",
-        title: "[Certification Name]",
-        org: "[Platform] · [Year]",
-        description: "Editable placeholder — add your certification details here.",
     },
 ];
 
@@ -65,8 +58,8 @@ export const hackathons: Hackathon[] = [
 ];
 
 export const achievementStats = [
+    { value: "9.2", label: "CGPA" },
+    { value: "5th", label: "Semester" },
     { value: "5+", label: "Hackathons Attended" },
     { value: "2×", label: "Top 10 Finishes" },
-    { value: "1", label: "Leadership Role" },
-    { value: "Multiple", label: "Projects Built" },
 ];
