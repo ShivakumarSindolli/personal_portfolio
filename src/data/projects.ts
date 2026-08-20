@@ -261,5 +261,9 @@ export const aiDoctorProProject: AIDoctorProProject = {
             body: "Chain a production-shaped AI pipeline — speech-to-text, vision, retrieval-augmented generation, and LLM reasoning — into a single consultation flow, on top of a real multi-tenant patient/doctor portal, not just a static demo.",
         },
     ],
-    links: { caseStudy: true },
+    links: {
+        demo: "https://aidoctornew.vercel.app/",
+        github: "https://github.com/ShivakumarSindolli/AI_doctor",
+        caseStudy: true,
+    },
 };

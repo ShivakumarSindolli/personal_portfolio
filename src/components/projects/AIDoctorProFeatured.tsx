@@ -115,13 +115,28 @@ export default function AIDoctorProFeatured({
                             View Case Study
                         </button>
 
-                        <a
-                            href="#"
-                            className="rounded-full border border-stroke px-6 py-3 text-sm text-muted transition-colors hover:border-white/30 hover:text-text-primary"
-                        >
-                            GitHub
-                        </a>
-                </div>
+                        {aiDoctorProProject.links.demo && (
+                            <a
+                                href={aiDoctorProProject.links.demo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full border border-stroke px-6 py-3 text-sm text-text-primary transition-transform duration-300 hover:scale-105 hover:border-white/30"
+                            >
+                                Live Demo
+                            </a>
+                        )}
+
+                        {aiDoctorProProject.links.github && (
+                            <a
+                                href={aiDoctorProProject.links.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full border border-stroke px-6 py-3 text-sm text-muted transition-colors hover:border-white/30 hover:text-text-primary"
+                            >
+                                GitHub
+                            </a>
+                        )}
+                    </div>
             </div>
 
             {/* Live consultation loading / Brain scan panel */}
